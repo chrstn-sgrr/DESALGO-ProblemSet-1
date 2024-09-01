@@ -10,15 +10,14 @@ def selection_sort(list):
     # Traverse through all list elements
     for i in range(len(list)):
         # Find the minimum element in remaining unsorted list
-        min_idx = i
+        min_index = i
         for j in range(i+1, len(list)):
-            if list[j] < list[min_idx]:
-                min_idx = j
+            if list[j] < list[min_index]:
+                min_index = j
         
         # Swap the found minimum element with the first element
-        list[i], list[min_idx] = list[min_idx], list[i]
+        list[i], list[min_index] = list[min_index], list[i]
 
-# Example usage
 numbers = [10, 9, 8, 7, 6, 5, 4, 3, 2, 1]
 selection_sort(numbers)
 print("Sorted array:", numbers)
