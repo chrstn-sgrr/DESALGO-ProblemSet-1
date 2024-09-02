@@ -7,17 +7,18 @@ b.) Use a loop invariant to check that the algorithm is correct, and make sure t
 '''
 
 def selection_sort(list):
-    # Traverse through all list elements
-    for i in range(len(list)):
-        # Find the minimum element in remaining unsorted list
-        min_index = i
-        for j in range(i+1, len(list)):
+    
+    for i in range(len(list)): # Traverse through all list elements (Outer Loop)
+        min_index = i # Find the minimum element in remaining unsorted list
+        for j in range(i+1, len(list)): # (Inner Loop)
             if list[j] < list[min_index]:
                 min_index = j
         
-        # Swap the found minimum element with the first element
-        list[i], list[min_index] = list[min_index], list[i]
+        list[i], list[min_index] = list[min_index], list[i] # Swap the found minimum element with the first element
 
-numbers = [10, 9, 8, 7, 6, 5, 4, 3, 2, 1]
+#numbers = [10, 9, 8, 7, 6, 5, 4, 3, 2, 1]
+numbers = [9, 2, 5, 4, 3, 8, 10, 1, 7, 6]
+
 selection_sort(numbers)
-print("Sorted array:", numbers)
+print("From a array of numbers of 1-10,")
+print("This is the sorted array:", numbers)
